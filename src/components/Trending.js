@@ -6,7 +6,7 @@ import axios from "axios";
 const Trending = () => {
   const [movies, setMovies] = useState([]);
 
-  const media_type = "all";
+  const media_type = "movie";
   const time_window = "day";
 
   useEffect(() => {
@@ -20,7 +20,6 @@ const Trending = () => {
         }
       )
       .then((response) => {
-        console.log("Datas", response.data.results);
         setMovies(response.data.results);
       });
   }, []);
@@ -39,6 +38,7 @@ const Trending = () => {
               className="d-flex justify-content-center"
             >
               <Cards
+                idMovie={movie.id}
                 image={process.env.REACT_APP_PATH + movie.poster_path}
                 title={movie.original_title}
                 sinopsis={movie.overview.substring(0, 80)}

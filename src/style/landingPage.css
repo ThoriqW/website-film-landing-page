@@ -62,9 +62,14 @@
 }
 
 .cardBody {
-  height: 170px;
+  height: 130px;
 }
 
 #navbarScrollingDropdown::after {
   content: none;
+}
+
+.pagination p {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
