@@ -9,7 +9,7 @@ const Intro = () => {
             <div className="title">NONTON GRATIS</div>
             <div className="title">TERLENGKAP DAN TERBARU</div>
             <div className="introButton mt-4 text-center">
-                <Button variant="light">List Film</Button>
+              <Button variant="light">List Film</Button>
             </div>
           </Col>
         </Row>
