@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Dropdown, DropdownButton } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
 import axios from "axios";
@@ -10,7 +10,7 @@ const Action = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BASE_URL}/discover/movie`, {
+      .get(`${process.env.REACT_APP_BASE_URL}/discover/movie/`, {
         params: {
           api_key: process.env.REACT_APP_API,
           with_genres: 28,
@@ -21,6 +21,8 @@ const Action = () => {
         setActionMovies(response.data.results);
       });
   }, [page]);
+
+  //useEffect will run if the value of page change. if that array is empty useEffect only run once the website reload
 
   const nextPage = () => {
     setPage(page + 1);
@@ -36,10 +38,12 @@ const Action = () => {
 
   return (
     <div>
-      <Container className="pb-4">
-        <h1 id="action" className="text-white pt-4">
-          ACTION MOVIES
-        </h1>
+      <Container className="pb-4 pt-4">
+        <div className="d-flex justify-content-between align-items-center">
+          <h2 id="action" className="text-white">
+            ACTION MOVIES
+          </h2>
+        </div>
         <Row>
           {actionMovies.map((movie) => (
             <Col

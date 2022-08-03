@@ -5,12 +5,10 @@ const Intro = () => {
     <div className="intro d-flex align-items-end">
       <Container className="text-white d-flex justify-content-center align-items-center">
         <Row>
-          <Col>
-            <div className="title">REKOMENDASI FILM</div>
-            <div className="title">TERLENGKAP DAN TERBARU</div>
-            <div className="introButton mt-4 text-center">
-              <Button variant="light">List Film</Button>
-            </div>
+          <Col className="text-center">
+            <div className="title">GET RECOMENDATION</div>
+            <div className="title">OR GET OUT.</div>
+            <p className="sub-title">Best Place To Find You Favorite Movie</p>
           </Col>
         </Row>
       </Container>

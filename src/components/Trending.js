@@ -27,9 +27,9 @@ const Trending = () => {
   return (
     <div>
       <Container className="pb-4">
-        <h1 id="trending" className="text-white pt-4">
+        <h2 id="trending" className="text-white pt-4">
           TRENDING MOVIES
-        </h1>
+        </h2>
         <Row>
           {movies.map((movie) => (
             <Col
